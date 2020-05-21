@@ -1,0 +1,31 @@
+Write 3 programs which accomplishes the following things.
+
+1. Profiles disk usage.
+	Design the workload in such a way that the total execution time is dominated by the disk read times.
+	Disk write times do not matter that much because the writes are highly likely to be written to page cache.
+	Thanks to the write-back cache technique.
+	url : https://glandium.org/blog/?p=1476
+	tools eg: iotop [shows disk i/o per process]
+
+2. Profiling network usage.
+	Design the workload in such a way that the total execution time is dominated by the disk read times.
+	nethogs is a good tool to perform this operation.
+	It shows the usage per process.
+	$ top -b -n 1 > top.txt
+
+3. Profiling compute usage.
+	We can get the average compute time using top 
+	Eg: ps -p <pid> -o %cpu,%mem,cmd
+
+
+for i in range(1,11):
+    filename = "sample_files/"+str(i)
+    fd = open(filename,'r')
+    msg = fd.read()
+    print("File read ",i)
+
+MISTAKES:
+Never give the name of the constant to be PATH
+Because PATH is set to the following things.
+
+/home/swamiji/anaconda3/bin:/home/swamiji/anaconda3/condabin:/home/swamiji/.local/bin:/home/swamiji/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/usr/local/go/bin
