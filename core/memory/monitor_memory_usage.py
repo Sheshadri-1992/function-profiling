@@ -1,7 +1,7 @@
 import psutil
 import time
 
-LOCATION= '../output/'
+LOCATION= '/home/master/image_detection/function-profiling/core/output/'
 file_name = '_memory_usage.txt'
 
 def measure_memory_activity(pid):

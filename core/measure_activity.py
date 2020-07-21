@@ -13,9 +13,9 @@ Executes a script which captures the network usage process-id
 
 
 def network_activity(pid):
-    try:
+#    try:
         monitor_network_usage.check_network_activity(pid)
-    except:
+#    except:
         print("Exception caught in network activity")
 
 
@@ -26,9 +26,9 @@ url: https://stackoverflow.com/questions/49357887/how-to-get-current-disk-io-and
 
 
 def disk_activity(pid):
-    try:
+#try:
         monitor_disk_usage.measure_disk_activity(pid)
-    except:
+#    except:
         print("Exception caught in disk activity")
 
 '''
@@ -37,9 +37,9 @@ Measure the cpu activity of the program
 
 
 def cpu_activity(pid):
-    try:
+#try:
         monitor_compute_usage.measure_compute_activity(pid)
-    except:
+#    except:
         print("Exception caught in compute activity")
 
 '''
@@ -48,9 +48,9 @@ Measure the memory usage of the program
 
 
 def memory_activity(pid):
-    try:
+#    try:
         monitor_memory_usage.measure_memory_activity(pid)
-    except:
+#    except:
         print("Exception caught in memory activity")
 
 '''

@@ -1,7 +1,7 @@
 import psutil
 import subprocess
 
-LOCATION = "../network/"
+LOCATION = "./"
 SCRIPT = "network_activity_measure.sh"
 
 def check_network_activity(pid):

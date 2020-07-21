@@ -9,7 +9,7 @@ fi
 _pid=$1
 echo "[bash] The pid is "$_pid
 
-LOCATION='../output/'
+LOCATION='/home/master/image_detection/function-profiling/core/output/'
 # Capture the network activity
 sudo nethogs -t -c 10 | grep $_pid >> "${LOCATION}"$_pid'_network_raw_logs.txt'
 

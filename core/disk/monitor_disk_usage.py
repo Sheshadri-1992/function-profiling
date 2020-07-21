@@ -1,7 +1,7 @@
 import psutil
 import time
 
-LOCATION= '../output/'
+LOCATION= '/home/master/image_detection/function-profiling/core/output/'
 file_name = '_disk_usage.txt'
 
 def measure_disk_activity(pid):
@@ -17,7 +17,8 @@ def measure_disk_activity(pid):
                 total_disk_MB = io_counters[4] + io_counters[5]  # read_chars + write_chars
                 # print("Disk-IO => PID: ", proc.pid, "Disk", total_disk_MB, " IO counters ", io_counters)
                 output_activity = str(io_counters[4])+","+str(io_counters[5])+","+str(total_disk_MB)
-                my_file.write(output_activity+"\n")
+                my_file.write(str(time.time())+output_activity+"\n")
+                print("Wrote to disk",output_activity)
 
         result = psutil.pid_exists(pid)
         time.sleep(1)
