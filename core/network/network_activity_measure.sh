@@ -9,7 +9,7 @@ fi
 _pid=$1
 echo "[bash] The pid is "$_pid
 
-LOCATION='/home/swamiji/phd/csl/serverless_computing/function_profiling/output/'
+LOCATION='../output/'
 # Capture the network activity
 sudo nethogs -t -c 10 | grep $_pid >> "${LOCATION}"$_pid'_network_raw_logs.txt'
 

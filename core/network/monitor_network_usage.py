@@ -1,7 +1,7 @@
 import psutil
 import subprocess
 
-LOCATION = "/home/swamiji/phd/csl/serverless_computing/function_profiling/core/network/"
+LOCATION = "../network/"
 SCRIPT = "network_activity_measure.sh"
 
 def check_network_activity(pid):
