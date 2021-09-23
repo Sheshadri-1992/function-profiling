@@ -14,7 +14,7 @@ def measure_compute_activity(pid):
     while result == True:
 
         p = psutil.Process(pid)
-        cpu_percent_util = p.cpu_percent()
+        cpu_percent_util = p.cpu_percent(interval=0.1)
         result = psutil.pid_exists(pid)
         output_activity = str(time.time()) + "," + str(cpu_percent_util)
         my_file.write(output_activity + "\n")
