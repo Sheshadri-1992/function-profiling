@@ -1,7 +1,7 @@
 import psutil
 import time
 
-LOCATION= '/home/swamiji/phd/csl/serverless_computing/function_profiling/output/'
+LOCATION= '../../output/'
 file_name = '_cpu_usage.txt'
 
 def measure_compute_activity(pid):

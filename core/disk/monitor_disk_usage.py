@@ -1,7 +1,7 @@
 import psutil
 import time
 
-LOCATION= '/home/swamiji/phd/csl/serverless_computing/function_profiling/output/'
+LOCATION= '../../output/'
 file_name = '_disk_usage.txt'
 
 def measure_disk_activity(pid):
